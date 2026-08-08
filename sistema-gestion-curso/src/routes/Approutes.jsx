@@ -1,9 +1,11 @@
-import {Routes} from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
+import Dashboard from "../pages/Dashboard";
 
 function AppRoutes() {
   return (
     <Routes>
-      {/* Define your routes here */}
+      <Route path="/" element={<Dashboard/>} />
+      
     </Routes>
   );
 }
