@@ -7,7 +7,7 @@ function Enrollment() {
         <h1>Enrollment</h1>
       </header>
       <main>
-        <p>This is the Enrollment page.</p>
+        <p>Página de Inscripciones</p>
       </main>
       <Footer />
     </div>
