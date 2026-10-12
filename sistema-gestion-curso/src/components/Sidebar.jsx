@@ -1,39 +1,26 @@
 import { NavLink } from "react-router-dom";
 
 function Sidebar() {
-  // Clases para resaltar la opción seleccionada/activa en la navegación
   const linkClasses = ({ isActive }) =>
-    `block px-4 py-2 rounded-md font-medium transition-colors ${
+    `flex items-center px-4 py-2.5 rounded-lg text-sm font-medium transition-colors duration-150 ${
       isActive
-        ? "bg-blue-600 text-white"
-        : "text-gray-300 hover:bg-gray-700 hover:text-white"
+        ? "bg-violet-600 text-white shadow-sm"
+        : "text-slate-400 hover:bg-slate-800 hover:text-slate-200"
     }`;
 
   return (
-    <aside className="w-64 bg-gray-900 text-white min-h-screen p-4 flex flex-col justify-between">
-      <div>
-        <h2 className="text-xl font-bold mb-6 text-center text-blue-400">
+    <aside className="w-64 bg-slate-900 text-slate-100 min-h-screen p-6 flex flex-col justify-between border-r border-slate-800">
+      <div className="space-y-8">
+        <h2 className="text-2xl font-bold text-center tracking-tight text-violet-400">
           EduManage
         </h2>
-        
-        <nav className="space-y-2">
-          <NavLink to="/" className={linkClasses}>
-            Dashboard
-          </NavLink>
-          <NavLink to="/students" className={linkClasses}>
-            Estudiantes
-          </NavLink>
-          <NavLink to="/courses" className={linkClasses}>
-            Cursos
-          </NavLink>
-          <NavLink to="/enrollments" className={linkClasses}>
-            Matrículas
-          </NavLink>
-        </nav>
-      </div>
 
-      <div className="border-t border-gray-700 pt-4 text-xs text-gray-400 text-center">
-        Sistema de Gestión v1.0
+        <nav className="space-y-1.5">
+          <NavLink to="/" className={linkClasses}>Dashboard</NavLink>
+          <NavLink to="/students" className={linkClasses}>Estudiantes</NavLink>
+          <NavLink to="/courses" className={linkClasses}>Cursos</NavLink>
+          <NavLink to="/enrollments" className={linkClasses}>Matrículas</NavLink>
+        </nav>
       </div>
     </aside>
   );
